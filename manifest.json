@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "rafael.omarchy-obsidian-panel",
+  "name": "Obsidian Panel",
+  "version": "1.0.0",
+  "author": "rafaelmehdiyev",
+  "description": "Switch between Obsidian vaults from the menu bar",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Obsidian Vaults",
+    "description": "Click to open a vault switcher panel",
+    "category": "Productivity",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}

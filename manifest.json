@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "id": "rafael.omarchy-obsidian-panel",
   "name": "Obsidian Panel",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "rafaelmehdiyev",
-  "description": "Switch between Obsidian vaults from the menu bar",
+  "description": "Search notes across Obsidian vaults from the menu bar",
   "kinds": [
     "bar-widget"
   ],
@@ -13,7 +13,7 @@
   },
   "barWidget": {
     "displayName": "Obsidian Vaults",
-    "description": "Click to open a vault switcher panel",
+    "description": "Search notes and open vaults",
     "category": "Productivity",
     "allowMultiple": false,
     "defaultSection": "right"

@@ -1,13 +1,16 @@
 # Obsidian Panel
 
-An Omarchy bar plugin that lets you switch between Obsidian vaults directly from the menu bar.
+An Omarchy bar plugin that lets you switch between Obsidian vaults and search notes across vaults from the menu bar.
+
+![Showcase](showcase.gif)
 
 ## Features
 
 - Shows all your Obsidian vaults in a panel
 - Click any vault to open it instantly
-- Keyboard navigation (j/k to move, Enter to open, Escape to close)
-- Automatically reads vaults from Obsidian's config — no manual setup
+- Search your notes across every vault from one search bar
+- Keyboard navigation (Up/Down to move, Enter to open, Escape to close)
+- Automatically reads vaults from Obsidian's config - NO MANUAL SETUP
 
 ## Requirements
 
@@ -16,7 +19,7 @@ An Omarchy bar plugin that lets you switch between Obsidian vaults directly from
 ## Install
 
 ```bash
-omarchy plugin add https://github.com/rafaelmehdiyev/omarchy-obsidian-panel
+omarchy plugin add https://github.com/rafaelmehdiyev/omarchy-obsidian-panel --enable
 ```
 
 ## Preview

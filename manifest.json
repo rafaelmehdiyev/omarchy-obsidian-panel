@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "rafael.omarchy-obsidian-panel",
   "name": "Obsidian Panel",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "rafaelmehdiyev",
   "description": "Search notes across Obsidian vaults from the menu bar",
   "kinds": [
@@ -16,6 +16,20 @@
     "description": "Search notes and open vaults",
     "category": "Productivity",
     "allowMultiple": false,
-    "defaultSection": "right"
+    "defaultSection": "right",
+    "schema": [
+      {
+        "key": "obsidianConfigDir",
+        "type": "path",
+        "default": "${XDG_CONFIG_HOME:-$HOME/.config}/obsidian",
+        "description": "Directory where Obsidian stores its config (obsidian.json)"
+      },
+      {
+        "key": "autoOpenAfterCreate",
+        "type": "boolean",
+        "default": true,
+        "description": "Automatically open the new vault after creating it"
+      }
+    ]
   }
 }

@@ -137,8 +137,8 @@ Panel {
         }
     }
 
-    implicitWidth: Style.bar.iconSlot
-    implicitHeight: Style.bar.iconSlot
+    implicitWidth: button.implicitWidth
+    implicitHeight: button.implicitHeight
 
     BarIconButton {
         id: button
@@ -146,17 +146,25 @@ Panel {
         bar: root.bar
         text: ""
         tooltipText: "Obsidian Vaults"
+        // BarIconButton draws its component through an optical canvas that
+        // measures the painted bounds and re-centers them. The component must
+        // therefore be a plain canvas item with the artwork positioned by x/y,
+        // as every stock widget does: an Image that anchors itself (and nudges
+        // itself with verticalCenterOffset) fights that measurement, and the
+        // glyph ends up off the bar's icon line.
         iconComponent: Component {
-            Image {
-                source: Qt.resolvedUrl("obsidian.svg")
-                sourceSize.width: Style.bar.iconFont
-                sourceSize.height: Style.bar.iconFont
-                width: Style.bar.iconFont
-                height: Style.bar.iconFont
-                anchors.centerIn: parent
-                anchors.verticalCenterOffset: -1
-                fillMode: Image.Pad
-                smooth: true
+            Item {
+                implicitWidth: Style.bar.iconCanvas
+                implicitHeight: Style.bar.iconCanvas
+                Image {
+                    source: Qt.resolvedUrl("obsidian.svg")
+                    width: Style.bar.iconSize
+                    height: Style.bar.iconSize
+                    x: (parent.width - width) / 2
+                    y: (parent.height - height) / 2
+                    fillMode: Image.PreserveAspectFit
+                    smooth: true
+                }
             }
         }
         onPressed: function(b) { root.toggle() }
